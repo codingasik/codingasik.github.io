@@ -33,19 +33,22 @@
       </p>
       <div class="mt-4 bg-white p-4 rounded-lg text-sm">
         <p class="text-center">
-          Apa yang bisa kami bantu? 🙂
+          Apa yang bisa saya bantu? 🙂
         </p>
         <select class="w-full border-0 bg-slate-200 rounded-md mt-4 text-center" name="question" id="question">
           <option value="">--Pilih opsi--</option>
           <option value="sharing">Sharing seputar coding, Ebook dll</option>
           <option value="kolaborasi">Ingin berkolaborasi konten</option>
           <option value="kerjasama">Ingin kerjasama, PP, Endorse dll</option>
-          <option value="membuat">Ingin membuat website</option>
+          <option value="belajar">Ingin belajar buat website</option>
+          <option value="memesan">Ingin memesan website</option>
         </select>
         <div id="answer" class="hidden">
           <hr class="w-full bg-slate-200 h-1 my-4">
-          <p class="text-center">Segera hubungi kami via 👇️</p>
+          <p id="textAnswer" class="text-center">Segera hubungi kami via 👇️</p>
           <div class="flex gap-4">
+            <iframe id="formCourse" src="https://docs.google.com/forms/d/e/1FAIpQLSemR3lnBnahhO6nuSwDt-5fSboLtkwBFNZWstYb9-Bk94ZMEw/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0" class="mt-4">Memuat…</iframe>
+           
             <a id="whatsapp" href="https://wa.me/message/Q7VF2NURD7VMH1" class="bg-green-600 py-3 px-6 rounded-lg text-white text-center block mt-4 font-medium hover:bg-green-700 flex-1"><i class="fa fa-message mr-2"></i>WA</a>
             <a id="email" href="mailto:codingasik2020@gmail.com" class="bg-blue-500 py-3 px-6 rounded-lg text-white text-center block mt-4 font-medium hover:bg-blue-700 flex-1"><i class="fa fa-envelope mr-2 "></i>Email</a>
             <a id="instagram" href="https://instagram.com/codingasik" class="bg-blue-500 py-3 px-6 rounded-lg text-white text-center block mt-4 font-medium hover:bg-blue-700 flex-1"><i class="fa fa-message mr-2 "></i>DM Instagram</a>
@@ -115,6 +118,8 @@
     const whatsapp = document.getElementById("whatsapp");
     const email = document.getElementById("email");
     const instagram = document.getElementById("instagram");
+    const textAnswer = document.getElementById("textAnswer");
+    const formCourse = document.getElementById("formCourse");
 
     question.addEventListener("change", showAnswer);
 
@@ -126,14 +131,27 @@
           instagram.classList.remove('hidden');
           whatsapp.classList.add('hidden');
           email.classList.add('hidden');
+          formCourse.classList.add('hidden');
+          textAnswer.innerText = 'Segera hubungi saya via 👇️';
           break;
 
         case "kerjasama":
-        case "membuat":
+        case "memesan":
           answer.classList.remove('hidden');
           whatsapp.classList.remove('hidden');
           email.classList.remove('hidden');
           instagram.classList.add('hidden');
+          formCourse.classList.add('hidden');
+          textAnswer.innerText = 'Segera hubungi saya via 👇️';
+          break;
+
+        case "belajar":
+          answer.classList.remove('hidden');
+          whatsapp.classList.add('hidden');
+          email.classList.add('hidden');
+          instagram.classList.add('hidden');
+          formCourse.classList.remove('hidden');
+          textAnswer.innerText = 'Course sedang dalam proses pembuatan yaitu tentang "Web Design". Jika kalian mau langsung dberitau jika selesai, isi form dibawah 👇️ ';
           break;
       
         default:
@@ -141,6 +159,8 @@
           whatsapp.classList.remove('hidden');
           email.classList.remove('hidden');
           instagram.classList.remove('hidden');
+          formCourse.classList.add('hidden');
+          textAnswer.innerText = 'Segera hubungi saya via 👇️';
           break;
       }
     }

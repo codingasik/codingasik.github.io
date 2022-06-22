@@ -258,10 +258,11 @@
 
       $.ajax({
         url: "https://bagascodingasik.com/jwd/mail.php",
-        type: "POST",
-        beforeSend: function(xhr) {
-            xhr.setRequestHeader('Content-Type', 'application/json');
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Content-Type':'application/json'
         },
+        type: "POST",
         data: data,
         dataType: "JSON",
         success: function (response) {

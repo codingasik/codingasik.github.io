@@ -272,7 +272,15 @@
           "last_name" : lastName.value,
         }})
       })
-      .then(data => {
+      .then(function(response) {                      // first then()
+          if(response.ok)
+          {
+            return response.text();         
+          }
+
+          throw new Error('Something went wrong.');
+      }) 
+      .then(function(data) {                          // second then()
         if(data.status==200){
           //alert(`Succesfuly!, ${data.messages}`);
           Swal.fire("Succesfuly!", data.messages, "success");
@@ -283,11 +291,10 @@
             title: 'Error!',
             text: data.messages
           });
-        }
-        //console.log('Success:', data);
-      })
-      .catch((error) => {
-        //console.error('Error:', error);
+        } 
+      })  
+      .catch(function(error) {                        // catch
+        console.log('Request failed', error);
       });
     });
   

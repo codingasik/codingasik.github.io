@@ -155,6 +155,7 @@
       <a href="https://codingasik.github.io/"><img src="https://codingasik.github.io/assets/img/logo.png" alt=""></a>
     </footer>
   </main>
+
   <script>
     /* const answer = document.getElementById("answer");
     const question = document.getElementById("question");
@@ -269,23 +270,16 @@
           "last_name" : lastName.value,
         }})
       })
-      .then(function(response) {                      // first then()
-          if(response.ok)
-          {
-            return response.text();         
-          }
-
-          throw new Error('Something went wrong.');
-      }) 
-      .then(function(data) {                          // second then()
+      .then(data => {
         if(data.status==200){
           alert(`Succesfuly!, ${data.messages}`);
         }else{
           alert(`Failed!, ${data.messages}`);
-        } 
-      })  
-      .catch(function(error) {                        // catch
-        console.log('Request failed', error);
+        }
+        //console.log('Success:', data);
+      })
+      .catch((error) => {
+        //console.error('Error:', error);
       });
     });
   

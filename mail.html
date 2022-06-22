@@ -274,9 +274,9 @@
       .then(response => response.json())
       .then(data => {
         if(data.status==200){
-          alert(`Succesfuly!, ${data.message}`);
+          alert(`Succesfuly!, ${data.messages}`);
         }else{
-          alert(`Failed!, ${data.message}`);
+          alert(`Failed!, ${data.messages}`);
         }
         console.log('Success:', data);
       })

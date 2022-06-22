@@ -254,8 +254,7 @@
       };
       const formData = new FormData();
 
-      console.log(inputEmail.value);
-      localStorage.clear()
+      
   
       fetch("https://bagascodingasik.com/jwd/mail.php", {
         method: 'post',
@@ -278,7 +277,7 @@
         }else{
           alert(`Failed!, ${data.messages}`);
         }
-        console.log('Success:', data);
+        //console.log('Success:', data);
       })
       .catch((error) => {
         console.error('Error:', error);

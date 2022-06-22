@@ -9,7 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <link href="https://codingasik.github.io/assets/css/output.min.css" rel="stylesheet">
-  <link href="assets/css/custom.css" rel="stylesheet">
+  <link href="assets/css/custom.css" rel="stylesheet"><!-- SweetAlert2 -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/sweetalert2@9.17.2/dist/sweetalert2.min.css">
 
 </head>
 <body class="">
@@ -155,7 +156,8 @@
       <a href="https://codingasik.github.io/"><img src="https://codingasik.github.io/assets/img/logo.png" alt=""></a>
     </footer>
   </main>
-
+<!-- SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.17.2/dist/sweetalert2.all.min.js"></script>
   <script>
     /* const answer = document.getElementById("answer");
     const question = document.getElementById("question");
@@ -272,9 +274,15 @@
       })
       .then(data => {
         if(data.status==200){
-          alert(`Succesfuly!, ${data.messages}`);
+          //alert(`Succesfuly!, ${data.messages}`);
+          Swal.fire("Succesfuly!", data.messages, "success");
         }else{
-          alert(`Failed!, ${data.messages}`);
+          //alert(`Failed!, ${data.messages}`);
+          Swal.fire({
+            icon: 'error',
+            title: 'Error!',
+            text: data.messages
+          });
         }
         //console.log('Success:', data);
       })

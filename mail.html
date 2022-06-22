@@ -271,7 +271,9 @@
         }})
       })
       .then(data => {
-        if(data.status==200){
+        if(data.status==500){
+          alert(`Succesfuly!, ${data.messages}`);
+        }else if(data.status==500){
           alert(`Succesfuly!, ${data.messages}`);
         }else{
           alert(`Failed!, ${data.messages}`);

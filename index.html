@@ -1,194 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
+
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Mulai dari Nol — Web</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-  <link href="https://codingasik.github.io/assets/css/output.min.css" rel="stylesheet">
-  <link href="assets/css/custom.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    *{
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
-<body class="">
-  <main class="lg:w-[900px] mx-auto">
-    <header class="header">
-      <div class="flex gap-4 lg:gap-6 items-center justify-center">
-        <div class="w-24 rounded-full lg:w-36">
-          <img src="../assets/img/avatar.png" alt="Chandra Bagas" class="w-full">
-        </div>
-        <div class="flex flex-col gap-4 lg:gap-6">
-          <h1 class="text-lg font-semibold text-sky-500 lg:text-2xl">Bagas - Coding Asik</h1>
-          <div class="flex gap-3 items-center lg:gap-6">
-            <a title="instagram" href="https://instagram.com/codingasik" class="w-6 lg:w-8"><img class="w-full" src="https://codingasik.github.io/assets/img/icon/ic_instagram.svg" alt="@codingasik"></a>
-            <a title="youtube" href="https://youtube.com/codingasik" class="w-6 lg:w-8"><img class="w-full" src="https://codingasik.github.io/assets/img/icon/ic_youtube.svg" alt="Coding Asik"></a>
-            <a title="twitter" href="https://twitter.com/codingasik" class="w-6 lg:w-8"><img class="w-full" src="https://codingasik.github.io/assets/img/icon/ic_twitter.svg" alt="@codingasik"></a>
-            <a title="github" href="https://github.com/codingasik" class="w-6 lg:w-8"><img class="w-full" src="https://codingasik.github.io/assets/img/icon/ic_github.svg" alt="@codingasik"></a>
-          </div>
-        </div>
-      </div>
-      <p class="shadow-md rounded-lg p-4 text-sm text-center my-8 border-2 border-blue-100 leading-6 lg:text-base lg:my-8 lg:p-6">
-        Hi guys, gua Bagas - Coding Asik.<br> Gua ingin ngebantu kalian yang mau belajar pemrograman website dari awal
-      </p>
-      <div class="mt-4 bg-white p-4 rounded-lg text-sm">
-        <p class="text-center">
-          Apa yang bisa saya bantu? 🙂
+
+<body>
+
+  <nav>
+    <div class="container">
+      <h1><a href="#hero">Mulai dari Nol</a></h1>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="hero" class="hero">
+    <div class="container hero-content">
+      <div>
+        <h2>Belajar Web<br>Mulai dari Nol</h2>
+        <p>
+          Website ini dibuat sebagai langkah pertama memahami web programming
+          secara pelan-pelan, runtut, dan tidak menakutkan.
         </p>
-        <select class="w-full border-0 bg-slate-200 rounded-md mt-4 text-center" name="question" id="question">
-          <option value="">--Pilih opsi--</option>
-          <option value="sharing">Sharing seputar coding, Ebook dll</option>
-          <option value="kolaborasi">Ingin berkolaborasi konten</option>
-          <option value="kerjasama">Ingin kerjasama, PP, Endorse dll</option>
-          <option value="belajar">Ingin belajar buat website</option>
-          <option value="memesan">Ingin memesan website</option>
-        </select>
-        <div id="answer" class="hidden">
-          <hr class="w-full bg-slate-200 h-1 my-4">
-          <p id="textAnswer" class="text-center">Segera hubungi kami via 👇️</p>
-          <div class="flex gap-4">
-            <!-- <iframe id="formCourse" src="https://docs.google.com/forms/d/e/1FAIpQLSemR3lnBnahhO6nuSwDt-5fSboLtkwBFNZWstYb9-Bk94ZMEw/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0" class="mt-4">Memuat…</iframe> -->
-           
-            <a id="whatsapp" href="https://wa.me/message/Q7VF2NURD7VMH1" class="bg-green-600 py-3 px-6 rounded-lg text-white text-center block mt-4 font-medium hover:bg-green-700 flex-1"><i class="fa fa-message mr-2"></i>WA</a>
-            <a id="email" href="mailto:codingasik2020@gmail.com" class="bg-blue-500 py-3 px-6 rounded-lg text-white text-center block mt-4 font-medium hover:bg-blue-700 flex-1"><i class="fa fa-envelope mr-2 "></i>Email</a>
-            <a id="instagram" href="https://instagram.com/codingasik" class="bg-blue-500 py-3 px-6 rounded-lg text-white text-center block mt-4 font-medium hover:bg-blue-700 flex-1"><i class="fa fa-message mr-2 "></i>DM Instagram</a>
+        <div class="cta">
+          <a class="btn btn-primary" href="#about">Tentang Project</a>
+          <a class="btn btn-secondary" href="#contact">Hubungi Saya</a>
+        </div>
+      </div>
+      <img src="https://picsum.photos/520/420">
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container about-content">
+      <div>
+        <h2>Apa Itu Project Ini?</h2>
+        <p class="subtitle">
+          Project ini dirancang khusus untuk pemula yang ingin
+          memahami dasar web tanpa tekanan.
+        </p>
+        <ul>
+          <li>Belajar urutan, bukan kecepatan</li>
+          <li>Fokus ke pemahaman dasar</li>
+          <li>Langsung praktik, bukan teori panjang</li>
+        </ul>
+      </div>
+      <img src="https://picsum.photos/480/360">
+    </div>
+  </section>
+
+  <section id="skills" class="skills">
+    <div class="container">
+      <div class="section-head">
+        <h2>Yang Dipelajari</h2>
+        <p>Fondasi utama web programming</p>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <i class="fa-brands fa-html5"></i>
+          <h3>HTML</h3>
+          <p>Struktur halaman web</p>
+        </div>
+        <div class="card">
+          <i class="fa-brands fa-css3-alt"></i>
+          <h3>CSS</h3>
+          <p>Tampilan dan layout</p>
+        </div>
+        <div class="card">
+          <i class="fa-brands fa-js"></i>
+          <h3>JavaScript</h3>
+          <p>Interaksi sederhana</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <div class="section-head">
+        <h2>Gallery</h2>
+        <p>Klik gambar untuk melihat lebih besar</p>
+      </div>
+      <div class="gallery-grid">
+        <img src="https://picsum.photos/400/300?1" onclick="openImage(this.src)">
+        <img src="https://picsum.photos/400/300?2" onclick="openImage(this.src)">
+        <img src="https://picsum.photos/400/300?3" onclick="openImage(this.src)">
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p>Anda bisa mengubungi saya di</p>
+      </div>
+      <div class="contact-box">
+        <div class="info-box">
+          <h2>Info</h2>
+          <div class="info">
+            <div>
+              <i class="fa-solid fa-envelope"></i> email@example.com
+            </div>
+            <div>
+              <i class="fa-solid fa-phone"></i> 08xxxxxxxx
+            </div>
+            <div>
+              <i class="fa-solid fa-location-dot"></i> Indonesia
+            </div>
           </div>
         </div>
-
-      </div>
-
-    </header>
-
-    <h2 class="bio-section  text-lg mb-16 mt-8">Pre-Launch Jago Web Design</h2>
-
-    <section class="bio-box">
-      <p class="lg:text-2xl text-lg mt-4 font-medium text-center">Mau belajar dan bisa web programming tapi ngga tau mulai dari mana? 🤔</p>
-      <p class="lg:text-lg font-medium text-center mt-8">Nah kenalin Online Course "<span class="text-primary">Jago Web Design</span>" 👇️</p>
-      <img loading="lazy" class="my-8" src="assets/img/cover_jago_web_design.webp" alt="Jago Web Design">
-      <p class="lg:text-lg font-medium text-center mt-8 bg-white p-4 rounded-md"><span class="text-primary">40+ materi dasar html css beserta contoh projek :</span> <br>
-        Layouting, position, responsive web, tips trik dll, serta studi kasus membuat website mulai dari halaman login, membuat halaman depan (hero), serta web portfolio</p>
-
-      <p class="text-center mt-8">Nah karna akan ada <span class="text-primary font-medium">PRE-LAUNCH</span>, tentunya akan <span class="text-primary font-medium">ada diskon diawal</span> dan dengan <span class="text-primary font-medium">waktu yang terbatas</span></p>
-      <p class="text-center mt-4">So jika mau belajar, klik 👇️ dan isi formnya karena pemberitahuan via email atau whatsapp</p>
-      <div class="flex flex-col gap-4 text-center mt-8">
-        <a href="javascript:;" onclick="showForm()" class="btn-link bg-primary">SAYA MAU BELAJAR</a>
-      </div>
-      <hr class="bg-slate-100 h-1 my-4">
-      <iframe class="hidden" id="formCourse" src="https://docs.google.com/forms/d/e/1FAIpQLSemR3lnBnahhO6nuSwDt-5fSboLtkwBFNZWstYb9-Bk94ZMEw/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0" class="mt-4">Memuat…</iframe>
-
-    </section>
-
-    <h2 class="bio-section  text-lg mb-16 mt-8">Spesial Buat Kamu</h2>
-
-    <section class="bio-box">
-      <div class="flex flex-col gap-4 text-center">
-        <p class="lg:text-lg font-medium">Mau <u>Jago Database</u> Mysql? Klik 👇️👇️👇️</p>
-        <a href="https://codingasik.github.io/ebook-jago-database.html" target="_blank" class="btn-link"><i class="fa fa-check-circle text-sky-500"></i> FREE Ebook Jago Database</a>
-      </div>
-      <hr class="bg-slate-100 h-1 my-8">
-      <div class="flex flex-col gap-4 text-center">
-        <p class="lg:text-lg font-medium">Subscribe Channel Coding Asik</p>
-
-        <a href="https://www.youtube.com/codingasik/SeattleWebSearch?sub_confirmation=1" class="border-2 border-red-500 py-3 px-6 rounded-lg text-red-500 text-center mt-4 font-medium hover:bg-white hover:ring-2 hover:border-0 hover:ring-red-600 flex gap-2 justify-center mb-8"><img src="https://codingasik.github.io/assets/img/icon/ic_youtube.svg" alt="Subscribe"> Subscribe Coding Asik</a>
-      </div>
-    </section>
-
-    <!-- <h2 class="bio-section my-8 text-lg mb-16">Bingung Belajar Darimana?</h2>
-
-    <section class="bio-box">
-      <div class="flex gap-8 flex-col lg:flex-row">
-        <div class="flex-1">
-          <h2><i class="fa fa-play text-sky-500 mr-2 mb-4"></i> Harusnya Kegini Belajarnya</h2>
-          <iframe class="w-full aspect-video rounded-md" src="https://www.youtube.com/embed/r5jfjhoJOAM" title="Coding Asik Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="sosmed-box">
+          <h2>Follow</h2>
+          <div class="sosmed">
+            <div>
+              <i class="fa-brands fa-instagram"></i>
+              <a href="https://instagram.com/codingasik">@codingasik</a>
+            </div>
+            <div>
+              <i class="fa-brands fa-youtube"></i>
+              <a href="https://youtube.com/codingasik">Coding Asik</a>
+            </div>
+            <div>
+              <i class="fa-brands fa-tiktok"></i>
+              <a href="https://tiktok.com/@codingasik">@codingasik</a>
+            </div>
+          </div>
         </div>
-        <div class="flex-1">
-          <h2><i class="fa fa-play text-sky-500 mr-2 mb-4"></i> 12 Step Jadi Programmer</h2>
-          <iframe class="w-full aspect-video rounded-md" src="https://www.youtube.com/embed/ikbgc5kWN6o" title="Coding Asik Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-
       </div>
-    </section>
+    </div>
+  </section>
 
-    <h2 class="bio-section my-8 text-lg mb-16">Konten Youtube Coding Asik</h2>
+  <footer>
+    © 2026 — Mulai dari Nol · <a href="https://codingasikacademy.com" style="color:#818cf8;">codingasikacademy.com</a>
+  </footer>
 
-    <section class="bio-box">
-      <a href="https://www.youtube.com/codingasik/SeattleWebSearch?sub_confirmation=1" class="border-2 border-red-500 py-3 px-6 rounded-lg text-red-500 text-center mt-4 font-medium hover:bg-white hover:ring-2 hover:border-0 hover:ring-red-600 flex gap-2 justify-center mb-8"><img src="https://codingasik.github.io/assets/img/icon/ic_youtube.svg" alt="Subscribe"> Subscribe Coding Asik</a>
+  <div class="modal" id="modal" onclick="closeImage()">
+    <img id="modalImg">
+  </div>
 
-      <div class="flex gap-8 flex-col lg:flex-row">
-        <div class="flex-1">
-          <h2><i class="fa fa-play text-sky-500 mr-2 mb-4"></i> Video Youtube Terbaru</h2>
-          <iframe class="w-full aspect-video rounded-md" src="https://www.youtube.com/embed/yhecthiuKIs" title="Coding Asik Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="flex-1">
-          <h2><i class="fa fa-play text-sky-500 mr-2 mb-4"></i> Video Youtube Terpopuler</h2>
-          <iframe class="w-full aspect-video rounded-md" src="https://www.youtube.com/embed/c7RLH_NS9k0" title="Coding Asik Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+  <script src="main.js"></script>
 
-      </div>
-    </section> -->
-
-    <footer class="flex justify-center mt-16 mb-8">
-      <a href="https://codingasik.github.io/"><img src="https://codingasik.github.io/assets/img/logo.png" alt=""></a>
-    </footer>
-  </main>
-
-  <script>
-    const answer = document.getElementById("answer");
-    const question = document.getElementById("question");
-    const whatsapp = document.getElementById("whatsapp");
-    const email = document.getElementById("email");
-    const instagram = document.getElementById("instagram");
-    const textAnswer = document.getElementById("textAnswer");
-    const formCourse = document.getElementById("formCourse");
-
-    function showForm(){
-      if(formCourse.classList.contains("hidden")){
-        formCourse.classList.remove('hidden');
-      }else{
-        formCourse.classList.add('hidden');
-      }
-    }
-
-    question.addEventListener("change", showAnswer);
-
-    function showAnswer() {
-      switch (question.value) {
-        case "sharing":
-        case "kolaborasi":
-          answer.classList.remove('hidden');
-          instagram.classList.remove('hidden');
-          whatsapp.classList.add('hidden');
-          email.classList.add('hidden');
-          formCourse.classList.add('hidden');
-          textAnswer.innerText = 'Segera hubungi saya via 👇️';
-          break;
-
-        case "kerjasama":
-        case "memesan":
-          answer.classList.remove('hidden');
-          whatsapp.classList.remove('hidden');
-          email.classList.remove('hidden');
-          instagram.classList.add('hidden');
-          formCourse.classList.add('hidden');
-          textAnswer.innerText = 'Segera hubungi saya via 👇️';
-          break;
-
-        case "belajar":
-          formCourse.classList.remove('hidden');
-          break;
-      
-        default:
-          answer.classList.add('hidden');
-          whatsapp.classList.remove('hidden');
-          email.classList.remove('hidden');
-          instagram.classList.remove('hidden');
-          formCourse.classList.add('hidden');
-          textAnswer.innerText = 'Segera hubungi saya via 👇️';
-          break;
-      }
-    }
-  </script>
-  
 </body>
+
 </html>
